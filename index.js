@@ -35,7 +35,8 @@ function handleClick(e) {
     if (winner != null) {
       setTimeout(() => {
         winnerPlayer.textContent = winner;
-        modal.classList.replace("hidden", "flex");
+        modal.classList.replace("hidden","flex");
+        document.getElementById("restart").disabled = true;
       }, 100);
     }
     currentPlayer = currentPlayer == "X" ? "O" : "X";
@@ -67,6 +68,7 @@ function restart() {
 function close() {
   const modal = document.getElementById("modal");
   modal.classList.replace("flex", "hidden");
+  document.getElementById("restart").disabled = false;
 }
 
 init();
