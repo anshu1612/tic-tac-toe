@@ -14,7 +14,7 @@ function pageLoad() {
   for (let i = 0; i < 9; i++) {
     const cell = document.createElement("div");
     cell.className =
-      "bg-white rounded-sm w-12 h-12 text-fuchsia-600 font-extrabold text-2xl flex justify-center items-center";
+      "bg-white rounded-sm w-20 h-20 text-fuchsia-600 font-extrabold text-3xl flex justify-center items-center";
     cell.dataset.index = i;
     cell.addEventListener("click", handleClick);
     board.appendChild(cell);
